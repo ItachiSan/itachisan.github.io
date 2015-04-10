@@ -33,6 +33,8 @@ exclude:
   - templates
   - LICENSE.md
   - README.md
+  - LICENSE.lanyon
+  - README.lanyon
 
 ## "Jekyll Now" template stuff here
 # Includes an icon in the footer for each username you enter
