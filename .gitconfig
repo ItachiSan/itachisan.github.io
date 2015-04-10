@@ -1,2 +1,5 @@
-# Templates
-templates/
+# Jekyll generated website
+_site
+
+# Folder in which I play with some templates
+templates
