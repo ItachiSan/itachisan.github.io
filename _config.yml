@@ -12,7 +12,7 @@ relative_permalinks: true
 title:               Hic sunt leones
 tagline:             "AKA Giovanni Santini's personal blog. For real, yeah."
 description:         'A blog made from an IT lover about IT and other stuff (insert madness here). Based on the awesome <a href="https://github.com/poole/lanyon" target="_blank">Lanyon</a> theme, made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://itachisan.github.io
+url:                 http://giovannisantini.tk
 baseurl:             /
 paginate:            5
 
