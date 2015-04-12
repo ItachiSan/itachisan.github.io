@@ -23,7 +23,7 @@ author:
   email:             giovannisantini93@yahoo.it
 
 # Custom vars
-version:             1.0.1
+version:             1.0.2
 
 # This website's repo
 github:
@@ -57,7 +57,7 @@ footer-links:
 disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-61816764-1
 
 # Personal work: load share buttons if setted to true
 sharing:
