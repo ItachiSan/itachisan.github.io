@@ -22,7 +22,11 @@ layout: default
     {% for post in site.related_posts limit:3 %}
       <li>
         <h3>
+        {% if site.baseurl == "/" %}
+          <a href="{{ post.url }}">
+        {% else %}
           <a href="{{ site.baseurl }}{{ post.url }}">
+        {% endif %}
             {{ post.title }}
             <small>{{ post.date | date_to_string }}</small>
           </a>
