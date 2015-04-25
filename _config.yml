@@ -63,3 +63,9 @@ google_analytics: UA-61816764-1
 sharing:
   facebook: true
   gplus: true
+
+# Google Translator support
+translate:
+  enabled: true
+  language: en
+  meta-config: b63bed9405924efe-1d1f2e87fc0bdbad-g105a614c17a1f5ce-12
