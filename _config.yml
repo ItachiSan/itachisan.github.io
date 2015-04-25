@@ -66,6 +66,6 @@ sharing:
 
 # Google Translator support
 translate:
-  enabled: true
+  enabled: false
   language: en
   meta-config: b63bed9405924efe-1d1f2e87fc0bdbad-g105a614c17a1f5ce-12
