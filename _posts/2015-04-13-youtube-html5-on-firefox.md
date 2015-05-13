@@ -5,7 +5,7 @@ title: YouTube + HTML5 = PROFIT
 
 *Everybody loves YouTube, doesn't it*? I love this service too.
 
-I see lots of videos from it and I'm really sattisfied with this service.
+I see lots of videos from it and I'm really satisfied with this service.
 
 So, free candies and hugs for everybody, yuppie...
 (Notice: you can skip to the **TL;DR** part at the end of the page. **PRO TIP**: you can search for it in your browser.)
