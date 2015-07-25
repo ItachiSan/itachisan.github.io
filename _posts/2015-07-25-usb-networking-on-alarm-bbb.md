@@ -59,39 +59,39 @@ Nmap done: 256 IP addresses (2 hosts up) scanned in 2.56 seconds
 
 - Actually, connect from the *host* to your device with **SSH**
 {% highlight bash %}
-ssh root@10.42.0.143 # Use the IP found in the step before, user 'root' password 'root'
+$ ssh root@10.42.0.143 # Use the IP found in the step before, user 'root' password 'root'
 {% endhighlight %}
 
 - In order to work with just the USB cable, you need to download the *gadget-deadbeef-dhcp* package;
 the package was meant to enable connections through USB, I made the *-dhcp* version to have dynamic IP
 (we won't have problem with it later). You can get it with a:
 {% highlight bash %}
-yaourt -S gadget-deadbeef-dhcp
+$ yaourt -S gadget-deadbeef-dhcp
 {% endhighlight %}
 Else, you will have to build it:
 {% highlight bash %}
 pacman -S base base-devel wget # Let's have all installed
-wget https://aur4.archlinux.org/cgit/aur.git/snapshot/gadget-deadbeef-dhcp.tar.gz
-tar xf gadget-deadbeef-dhcp.tar.gz
-cd gadget-deadbeef-dhcp
-makepkg -srci # Builds without dependencies problems, clean up the temporary files and install
+$ wget https://aur4.archlinux.org/cgit/aur.git/snapshot/gadget-deadbeef-dhcp.tar.gz
+$ tar xf gadget-deadbeef-dhcp.tar.gz
+$ cd gadget-deadbeef-dhcp
+$ makepkg -srci # Builds without dependencies problems, clean up the temporary files and install
+# If you've problems, use 'pacman -U' as root
 {% endhighlight %}
 
 - Now we have to set up things for hostname resolution. Well'use *Samba* for this.
 It can be used for many more things, but in this case we'll use just its ***NetBIOS*** ability.
 So, get *Samba* and enable the *NetBIOS* daemon:
 {% highlight bash %}
-pacman -S samba
-cp /etc/samba/smb.conf.default /etc/samba/smb.conf
-systemctl enable nmbd
-systemctl start nmbd
+# pacman -S samba
+# cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+# systemctl enable nmbd
+# systemctl start nmbd
 {% endhighlight %}
 
 - On the *host*, enable *NetBIOS* name resolution by adding *wins* to the */etc/nsswitch.conf* file.
 It will look like this:
 {% highlight bash %}
 $ cat /etc/nsswitch.conf 
-# Begin /etc/nsswitch.conf
 ...
 hosts: files wins dns myhostname # See? We added 'wins' 
 ...
@@ -100,7 +100,7 @@ hosts: files wins dns myhostname # See? We added 'wins'
 ## And now?
 Now, just connect with a
 {% highlight bash %}
-ssh alarm # Assuming that you've not changed the BeagleBoneBlack hostname
+$ ssh alarm # Assuming that you've not changed the BeagleBoneBlack hostname
 {% endhighlight %}
 No more fuss for looking for IP, setting things or else.
 This tutorial is a bit long, but I hope it can be useful to someone. Cheers.
