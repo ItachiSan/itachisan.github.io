@@ -18,7 +18,7 @@ Some thoughts:
 on the client (the *BeagleBoneBlack*).
 * In a theoric way, this tutorial should be fine for any **ArchLinuxARM** device; just pay a bit more of attention.
 * I assume that the users reading this tutorial are a bit experienced (else *GTFO*); also, the commands with before a *$*
-will be commands that can be given as users, the ones with *#* should be given by the user *root*. 
+will be commands that can be given as users, the ones with *!* should be given by the user *root*.
 
 ## Let's do this
 So, these are the steps:
@@ -70,7 +70,7 @@ $ yaourt -S gadget-deadbeef-dhcp
 {% endhighlight %}
 Else, you will have to build it:
 {% highlight bash %}
-pacman -S base base-devel wget # Let's have all installed
+! pacman -S base base-devel wget # Let's have all installed
 $ wget https://aur4.archlinux.org/cgit/aur.git/snapshot/gadget-deadbeef-dhcp.tar.gz
 $ tar xf gadget-deadbeef-dhcp.tar.gz
 $ cd gadget-deadbeef-dhcp
@@ -82,10 +82,10 @@ $ makepkg -srci # Builds without dependencies problems, clean up the temporary f
 It can be used for many more things, but in this case we'll use just its ***NetBIOS*** ability.
 So, get *Samba* and enable the *NetBIOS* daemon:
 {% highlight bash %}
-# pacman -S samba
-# cp /etc/samba/smb.conf.default /etc/samba/smb.conf
-# systemctl enable nmbd
-# systemctl start nmbd
+! pacman -S samba
+! cp /etc/samba/smb.conf.default /etc/samba/smb.conf
+! systemctl enable nmbd
+! systemctl start nmbd
 {% endhighlight %}
 
 - On the *host*, enable *NetBIOS* name resolution by adding *wins* to the */etc/nsswitch.conf* file.
