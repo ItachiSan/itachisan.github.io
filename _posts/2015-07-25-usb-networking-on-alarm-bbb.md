@@ -77,6 +77,14 @@ $ cd gadget-deadbeef-dhcp
 $ makepkg -srci # Builds without dependencies problems, clean up the temporary files and install
 # If you've problems, use 'pacman -U' as root
 {% endhighlight %}
+**Notice**: people that want it to work even with *Windows* have to install the *gadget-deadbeef-legacy-dhcp*
+package, as the one above uses a driver which is not (*still*) supported from **BeagleBoard** official *Windows*
+drivers; so, just follow the steps above, replacing *gadget-deadbeef-dhcp* with *gadget-deadbeef-legacy-dhcp*.
+
+**PRO TIP**: I had to reinstall the official **BeagleBoard** drivers, which can be found [here](http://beagleboard.org/getting-started#step2).
+I had problems as *Windows 8.1* didn't allow me to install *unsigned* drivers; so, if you get to the last step of drivers installation
+and you get red crosses (*error in installation*) and you don't know why, try reinstalling after doing
+[this](http://www.howtogeek.com/167723/how-to-disable-driver-signature-verification-on-64-bit-windows-8.1-so-that-you-can-install-unsigned-drivers/).
 
 - Now we have to set up things for hostname resolution. Well'use *Samba* for this.
 It can be used for many more things, but in this case we'll use just its ***NetBIOS*** ability.
