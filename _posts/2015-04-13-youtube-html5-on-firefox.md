@@ -86,11 +86,11 @@ related source code is avaible, but it *should* use *hardware accellerated*
 
 ## But... #2
 Actually, it fully works just on *Chromium/Google Chrome*...
-![Fully works on ArchLinux Chromium...]({{ site.baseurl }}public/2015-04-13/chromium.png)
+![Fully works on ArchLinux Chromium...]({{ "/public/2015-04-13/chromium.png" | relative_url }})
 While on *Firefox*...
-![Doh #1.]({{ site.baseurl }}public/2015-04-13/firefox-archlinux.png)
+![Doh #1.]({{ "/public/2015-04-13/firefox-archlinux.png" | relative_url }})
 And on *Windows Firefox*
-![Doh #2.]({{ site.baseurl }}public/2015-04-13/firefox-windows.png)
+![Doh #2.]({{ "/public/2015-04-13/firefox-windows.png" | relative_url }})
 
 ## The final solution (TL;DR)
 
@@ -114,9 +114,9 @@ media.fragmented-mp4.use-blank-decoder: false
 
 And finally...
 *Firefox on ArchLinux*
-![Yes #1.]({{ site.baseurl }}public/2015-04-13/firefox-archlinux-working.png)
+![Yes #1.]({{ "/" | relative_url }}public/2015-04-13/firefox-archlinux-working.png)
 And on *Firefox on Windows*.
-![Yes #2.]({{ site.baseurl }}public/2015-04-13/firefox-windows-working.png)
+![Yes #2.]({{ "/" | relative_url }}public/2015-04-13/firefox-windows-working.png)
 
 ## The end
 Well, that's all folks for now.
