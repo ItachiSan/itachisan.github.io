@@ -18,7 +18,7 @@ The plugin that has just been used for *flash games* and Youtube.
 
 About the first of them, I can still remember some epic ones, as
 [Burrito Bison Revenge](http://www.kongregate.com/games/JuicyBeast/burrito-bison-revenge)
-and [Robot Unicorn Attack: Heavy Metal](http://games.adultswim.com/robot-unicorn-attack-heavy-metal-twitchy-online-game.html).
+and [Robot Unicorn Attack: Heavy Metal](https://www.crazygames.com/game/robot-unicorn-attack-heavy-metal).
 
 For Youtube... well, it's for Youtube.
 
