@@ -1,7 +1,7 @@
 # Dependencies
-gems:                [jekyll-paginate]
-markdown:            redcarpet
-highlighter:         pygments
+plugins:             [jekyll-paginate]
+#markdown:           redcarpet
+#highlighter:        pygments
 
 # Permalinks
 #
@@ -13,14 +13,14 @@ permalink:           pretty
 title:               Hic sunt leones
 tagline:             "AKA Giovanni Santini's personal blog. For real, yeah."
 description:         'A blog made from an IT lover about IT and other stuff (insert madness here). Based on the awesome <a href="https://github.com/poole/lanyon" target="_blank">Lanyon</a> theme, made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 http://giovannisantini.tk
+url:                 https://itachisan.github.io
 baseurl:             /
 paginate:            5
 
 # About/contact
 author:
   name:              Giovanni Santini
-  url:               https://www.facebook.com/giovanni.santini
+  url:               https://www.linkedin.com/in/giovanni-santini
   email:             giovannisantini93@yahoo.it
 
 # Custom vars
