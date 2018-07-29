@@ -1,5 +1,8 @@
-# Jekyll generated website
+# Jekyll generated website and stuff
 _site/
+.jekyll-metadata
+
+# Drafts, not to be published... yet.
 _drafts/
 
 # Folder in which I play with some templates
