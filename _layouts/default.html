@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="theme-base-08">
+<body class="theme-base-08">
 
-    {% include facebook.html %}
-    {% include gplus.html %}
-    {% include sidebar.html %}
+  {% include sidebar.html %}
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-          {% include gtranslator-body.html %}
-        </div>
-      </div>
-
-      <div class="container content">
-        {{ content }}
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+          <small>{{ site.tagline }}</small>
+        </h3>
       </div>
     </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <div class="container content">
+      {{ content }}
+    </div>
+  </div>
 
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-        document.addEventListener('click', function(e) {
-          var target = e.target;
+  <script src='{{ site.baseurl }}/public/js/script.js'></script>
 
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
+  <!-- Osano CookieConsent Javascript: https://www.osano.com/cookieconsent/documentation/about-cookie-consent/ -->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#aa0000",
+          "text": "#ffdddd"
+        },
+        "button": {
+          "background": "transparent",
+          "text": "#ffdddd",
+          "border": "#ff0000"
+        }
+      },
+      "position": "bottom-right",
+      "content": {
+        "message": "This website uses services that may set up cookies, namely: AddToAny (share content button), Disqus (add comment), Google Analitycs (analytics)."
+      }
+    });
+  </script>
+</body>
 
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
-    {% include analytics.html %}
-  </body>
 </html>

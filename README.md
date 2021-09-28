@@ -1,5 +1,9 @@
-Just my personal website.
-Avaible at [giovannisantini.tk](http://giovannisantini.tk).
-Still have to find a LICENSE and to add one. Too much to think.
-Consider reading the **Lanyon** specific Readme and License
-(As *README.lanyon* and *LICENSE.lanyon*).
+# My personal website.
+
+Avaible at https://itachisan.github.io.
+
+# Licenses
+![code](https://img.shields.io/badge/code-MIT-blue)
+![docs](https://img.shields.io/badge/docs-CC%20BY--SA%204.0-green)
+
+A full fledged license is available in LICENSE.md .

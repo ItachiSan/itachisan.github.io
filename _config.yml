@@ -1,30 +1,20 @@
-# Dependencies
-plugins:             [jekyll-paginate]
-#markdown:           redcarpet
-#highlighter:        pygments
-
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-#relative_permalinks: true
-
 # Setup
 title:               Hic sunt leones
-tagline:             "AKA Giovanni Santini's personal blog. For real, yeah."
-description:         'A blog made from an IT lover about IT and other stuff (insert madness here). Based on the awesome <a href="https://github.com/poole/lanyon" target="_blank">Lanyon</a> theme, made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:             AKA Giovanni Santini's personal blog. For real, yeah.
+description:
+  A blog made from an IT lover about IT and other stuff (insert madness here).
+  Based on the awesome <a href="https://github.com/poole/lanyon" target="_blank">Lanyon</a> theme,
+  made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.
 url:                 https://itachisan.github.io
-baseurl:             /
+baseurl:             ''
 paginate:            5
+permalink:           pretty
 
 # About/contact
 author:
   name:              Giovanni Santini
   url:               https://www.linkedin.com/in/giovanni-santini
   email:             giovannisantini93@yahoo.it
-
-# Custom vars
-version:             1.0.3
 
 # This website's repo
 github:
@@ -37,37 +27,17 @@ exclude:
   - LICENSE.lanyon
   - README.lanyon
 
-## "Jekyll Now" template stuff here
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email:
-  facebook:
-  flickr:
-  github: ItachiSan
-  instagram:
-  linkedin:
-  pinterest:
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: 
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version:             1.0.3
+google_analytics:    UA-61816764-1
+
+# Allow AddToAny integration.
+addtoany: true
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
 disqus: giovannisantini
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-61816764-1
-
-# Personal work: load share buttons if setted to 'true'
-sharing:
-  addtoany: true
-  facebook: false
-  gplus: false
-
-# Google Translator support
-translate:
-  enabled: false
-  language: en
-  meta-config: b63bed9405924efe-1d1f2e87fc0bdbad-g105a614c17a1f5ce-12

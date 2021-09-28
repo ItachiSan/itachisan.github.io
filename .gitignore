@@ -2,6 +2,10 @@
 _site/
 .jekyll-metadata
 
+# Jekyll caches
+.jekyll-cache
+vendor/bundle
+
 # Drafts, not to be published... yet.
 _drafts/
 
