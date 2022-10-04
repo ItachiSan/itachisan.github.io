@@ -22,3 +22,5 @@ gem "openssl", "~> 3.0", :group => :development
 # ffi
 
 gem "ffi", "~> 1.15", :group => :development
+
+gem "jemoji", "~> 0.12.0"

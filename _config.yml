@@ -1,11 +1,11 @@
 # Setup
-title:               Hic sunt leones
-tagline:             AKA Giovanni Santini's personal blog. For real, yeah.
+title:               Giovanni's dev blog
+tagline:             AKA the place where I write about my cool stuff.
 description:
   A blog made from an IT lover about IT and other stuff (insert madness here).
   Based on the awesome <a href="https://github.com/poole/lanyon" target="_blank">Lanyon</a> theme,
   made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.
-url:                 https://itachisan.github.io
+url:                 https://giovanni.is-a.dev
 baseurl:             ''
 paginate:            5
 permalink:           pretty
@@ -21,6 +21,7 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-minifier
+  - jemoji
 
 # About/contact
 author:
@@ -30,10 +31,10 @@ author:
 
 # This website's repo
 github:
-  repo:           https://github.com/ItachiSan/itachisan.github.io
+  repo:              https://github.com/ItachiSan/itachisan.github.io
 
 # Custom vars
-version:             1.0.3
+version:             2.0.0
 google_analytics:    UA-61816764-1
 
 # Allow AddToAny integration.
@@ -55,7 +56,7 @@ theme:
   # - Magenta: 0e
   # - Brown:   0f
   # Any invalid input will be silently ignored.
-  color:   08
+  color:   0a
   # Make the sidebar to overlay the content, rather than pushing it.
   overlay: true
   # Reverse the position of the sidebar (from left to right side)

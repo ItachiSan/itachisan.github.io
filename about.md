@@ -3,6 +3,19 @@ layout: page
 title: About
 ---
 
+### Credits
+This site's favicon was generated using the following font:
+
+- Font Title: Leckerli One
+- Font Author: Copyright (c) 2011 Gesine Todt ([www.gesine-todt.de](http://www.gesine-todt.de/)), with Reserved Font Names "Leckerli"
+- Font Source: [https://fonts.gstatic.com/s/leckerlione/v16/V8mCoQH8VCsNttEnxnGQ-1itLZxcBtItFw.ttf](https://fonts.gstatic.com/s/leckerlione/v16/V8mCoQH8VCsNttEnxnGQ-1itLZxcBtItFw.ttf)
+- Font License: SIL Open Font License, 1.1 ([https://scripts.sil.org/OFL](https://scripts.sil.org/OFL))
+
+All thanks to the amazing [Favicon.io](https://favicon.io) website!
+
+
+## Old stuff, needs cleanup
+
 ***Insert herpy derpy stuff here***
 Have to add many more things...
 
