@@ -10,16 +10,6 @@ baseurl:             ''
 paginate:            5
 permalink:           pretty
 
-# About/contact
-author:
-  name:              Giovanni Santini
-  url:               https://www.linkedin.com/in/giovanni-santini
-  email:             giovannisantini93@yahoo.it
-
-# This website's repo
-github:
-  repo:           https://github.com/ItachiSan/itachisan.github.io
-
 exclude:
   - templates
   - LICENSE.md
@@ -30,6 +20,17 @@ exclude:
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-minifier
+
+# About/contact
+author:
+  name:              Giovanni Santini
+  url:               https://www.linkedin.com/in/giovanni-santini
+  email:             giovannisantini93@yahoo.it
+
+# This website's repo
+github:
+  repo:           https://github.com/ItachiSan/itachisan.github.io
 
 # Custom vars
 version:             1.0.3
@@ -41,3 +42,21 @@ addtoany: true
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
 disqus: giovannisantini
+
+# Theme customization
+theme:
+  # You can customize the color via the correct code, listed below:
+  # - Red:     08
+  # - Orange:  09
+  # - Yellow:  0a
+  # - Green:   0b
+  # - Cyan:    0c
+  # - Blue:    0d
+  # - Magenta: 0e
+  # - Brown:   0f
+  # Any invalid input will be silently ignored.
+  color:   08
+  # Make the sidebar to overlay the content, rather than pushing it.
+  overlay: true
+  # Reverse the position of the sidebar (from left to right side)
+  reverse: false

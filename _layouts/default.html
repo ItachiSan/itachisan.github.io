@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 {% include head.html %}
-
-<body class="theme-base-08">
-
+<body{% if site.theme %} class="{% if site.theme.color %}theme-base-{{ site.theme.color }} {% endif %}{% if site.theme.overlay == true %}sidebar-overlay {% endif %}{% if site.theme.reverse == true %}layout-reverse{% endif %}{% endif %}">
   {% include sidebar.html %}
-
-  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
+  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the content to avoid any CSS collisions with our real content. -->
   <div class="wrap">
     <div class="masthead">
       <div class="container">
@@ -18,16 +13,14 @@
         </h3>
       </div>
     </div>
-
+    <!-- Main content -->
     <div class="container content">
       {{ content }}
     </div>
   </div>
-
+  <!-- Reactivity for the sidebar -->
   <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
   <script src='{{ site.baseurl }}/public/js/script.js'></script>
-
   <!-- Osano CookieConsent Javascript: https://www.osano.com/cookieconsent/documentation/about-cookie-consent/ -->
   <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
   <script>
@@ -49,6 +42,6 @@
       }
     });
   </script>
-</body>
+  </body>
 
 </html>
