@@ -1,4 +1,15 @@
 <!-- Google Analytics -->
+{% if site.google_analytics.gtag == true %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.google_analytics.id }}');
+</script>
+{% else %}
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -13,4 +24,5 @@
     'title': '{{ page.title | smartify }}'
   });
 </script>
+{% endif %}
 <!-- End Google Analytics -->

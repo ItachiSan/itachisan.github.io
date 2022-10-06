@@ -35,7 +35,15 @@ github:
 
 # Custom vars
 version:             2.0.0
-google_analytics:    UA-61816764-1
+
+# Support for Google Analytics.
+google_analytics:
+  # The ID of your Google Analytics property.
+  # For the newer Google Analytics, it should be the "Measurement ID".
+  id:   G-GVMQM4NQY2
+  # Whether you use Google Tag (gtag.js) or the old Analytics script.
+  # Should be true in most of the cases.
+  gtag: true
 
 # Allow AddToAny integration.
 addtoany: true
