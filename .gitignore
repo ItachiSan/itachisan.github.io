@@ -1,13 +1,19 @@
-# Jekyll generated website and stuff
-_site/
-.jekyll-metadata
+# Created by https://www.toptal.com/developers/gitignore/api/hugo
+# Edit at https://www.toptal.com/developers/gitignore?templates=hugo
 
-# Jekyll caches
-.jekyll-cache
-vendor/bundle
+### Hugo ###
+# Generated files by hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
 
-# Drafts, not to be published... yet.
-_drafts/
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
 
-# Folder in which I play with some templates
-templates/
+# Temporary lock file while building
+/.hugo_build.lock
+
+# End of https://www.toptal.com/developers/gitignore/api/hugo

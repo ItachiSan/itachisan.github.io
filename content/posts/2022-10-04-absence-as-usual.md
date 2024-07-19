@@ -1,6 +1,7 @@
 ---
-layout: post
-title: Absent as usual... Life is hard
+date:  '2022-10-04T00:00:00Z'
+title: 'Absent as usual... Life is hard'
+slug:  'absence-as-usual'
 ---
 
 Well, hello again!

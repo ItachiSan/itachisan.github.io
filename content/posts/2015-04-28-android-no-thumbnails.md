@@ -1,6 +1,7 @@
 ---
-layout: post
-title: "Android: Preventing Gallery thumbnails creation"
+date:  '2015-04-28T00:00:00Z'
+title: 'Android: Preventing Gallery thumbnails creation'
+slug:  'android-no-thumbnails'
 ---
 
 I'm really having an hard time in this period (***exams, duh***) but considering
@@ -43,12 +44,12 @@ Now, reboot your phone in *recovery mode* and open your shell (in *TWRP* there's
 one that can be runned in recovery, else connect your phone to your PC and use
 an *adb shell*... check that you're using **root** with *whoami*)
 
-{% highlight bash %}
+{{< highlight bash >}}
 cd /sdcard # Should exist as fallback... anyways, getting in your main memory folder
 cd DCIM # Entering photos folder, where thumbnails are
 rm -f .thumbnails/* # Removing all thumbnails
 chmod 000 .thumbnails # Making the thumbnail folder not accessible anymore
-{% endhighlight %}
+{{< / highlight >}}
 
 Done! Now the thumbnails in the Gallery app will be generated on the fly... and you will have some free memory now.
 That's all for now, folks!

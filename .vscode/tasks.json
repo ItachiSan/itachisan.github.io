@@ -4,25 +4,18 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Jekyll: Serve",
+            "label": "Hugo: Serve",
             "type": "shell",
-            "command": "bundle exec jekyll serve --watch", // --livereload
+            "command": "hugo server --buildDrafts",
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "dependsOn": ["Bundler: Install"]
+            }
         },
         {
-            "label": "Bundler: Install",
+            "label": "Hugo: Build",
             "type": "shell",
-            "command": "bundler install",
-            "group": "build"
-        },
-        {
-            "label": "Bundler: Update",
-            "type": "shell",
-            "command": "bundler update",
+            "command": "hugo",
             "group": "build"
         }
     ]

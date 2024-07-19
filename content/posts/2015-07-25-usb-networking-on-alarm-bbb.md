@@ -1,6 +1,7 @@
 ---
-layout: post
-title: "ArchLinuxARM on BeagleBone Black: getting network working over USB"
+date:  '2015-07-25T00:00:00Z'
+title: 'ArchLinuxARM on BeagleBone Black: getting network working over USB'
+slug:  'usb-networking-on-alarm-bbb'
 ---
 
 As written in title, this post will be about setting up a working USB connection
@@ -47,7 +48,7 @@ Also, I allowed sharing connection through Ethernet with *NetworkManager*
   * go on NetworkManager
   * find out the IP of the shared Ethernet network (*e.g. 10.42.0.1*)
   * find the actual IP of the *BeagleBoardBlack* by inspecting the network, doing something like:
-{% highlight bash %}
+{{< highlight bash >}}
 $ nmap 10.42.0.1/24
 # Here comes the output
 Starting Nmap 6.47 ( http://nmap.org ) at 2015-07-24 17:21 CEST
@@ -63,28 +64,28 @@ Not shown: 999 closed ports
 PORT   STATE SERVICE
 22/tcp open  ssh # See, SSH port is open
 Nmap done: 256 IP addresses (2 hosts up) scanned in 2.56 seconds
-{% endhighlight %}
+{{< / highlight >}}
 
 - Actually, connect from the *host* to your device with **SSH**
-{% highlight bash %}
+{{< highlight bash >}}
 $ ssh root@10.42.0.143 # Use the IP found in the step before, user 'root' password 'root'
-{% endhighlight %}
+{{< / highlight >}}
 
 - In order to work with just the USB cable, you need to download the *gadget-deadbeef-dhcp* package;
 the package was meant to enable connections through USB, I made the *-dhcp* version to have dynamic IP
 (we won't have problem with it later). You can get it with a:
-{% highlight bash %}
+{{< highlight bash >}}
 $ yaourt -S gadget-deadbeef-dhcp
-{% endhighlight %}
+{{< / highlight >}}
 Else, you will have to build it:
-{% highlight bash %}
+{{< highlight bash >}}
 ! pacman -S base base-devel wget # Let's have all installed
 $ wget https://aur4.archlinux.org/cgit/aur.git/snapshot/gadget-deadbeef-dhcp.tar.gz
 $ tar xf gadget-deadbeef-dhcp.tar.gz
 $ cd gadget-deadbeef-dhcp
 $ makepkg -srci # Builds without dependencies problems, clean up the temporary files and install
 # If you've problems, use 'pacman -U' as root
-{% endhighlight %}
+{{< / highlight >}}
 **Notice**: people that want it to work even with *Windows* have to install
 the *gadget-deadbeef-legacy-dhcp* package, as the one above uses a driver which
 is not (*still*) supported from **BeagleBoard** official *Windows* drivers; so,
@@ -100,26 +101,26 @@ and you don't know why, try reinstalling after doing
 - Now we have to set up things for hostname resolution. Well'use *Samba* for this.
 It can be used for many more things, but in this case we'll use just its ***NetBIOS*** ability.
 So, get *Samba* and enable the *NetBIOS* daemon:
-{% highlight bash %}
+{{< highlight bash >}}
 ! pacman -S samba
 ! cp /etc/samba/smb.conf.default /etc/samba/smb.conf
 ! systemctl enable nmbd
 ! systemctl start nmbd
-{% endhighlight %}
+{{< / highlight >}}
 
 - On the *host*, enable *NetBIOS* name resolution by adding *wins* to the */etc/nsswitch.conf* file.
 It will look like this:
-{% highlight bash %}
-$ cat /etc/nsswitch.conf 
+{{< highlight bash >}}
+$ cat /etc/nsswitch.conf
 ...
-hosts: files wins dns myhostname # See? We added 'wins' 
+hosts: files wins dns myhostname # See? We added 'wins'
 ...
-{% endhighlight %}
+{{< / highlight >}}
 
 ## And now?
 Now, just connect with a
-{% highlight bash %}
+{{< highlight bash >}}
 $ ssh alarm # Assuming that you've not changed the BeagleBoneBlack hostname
-{% endhighlight %}
+{{< / highlight >}}
 No more fuss for looking for IP, setting things or else.
 This tutorial is a bit long, but I hope it can be useful to someone. Cheers.

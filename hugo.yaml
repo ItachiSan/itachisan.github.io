@@ -1,0 +1,16 @@
+baseURL: https://giovanni.is-a.dev
+disablePathToLower: true
+languageCode: en-us
+title: Giovanni's dev blog
+enableEmoji: true
+
+permalinks:
+  page:
+    posts: /:year/:month/:day/:slug/
+    pages: /:slug/
+
+markup:
+  goldmark:
+    renderHooks:
+      image:
+        enableDefault: true
