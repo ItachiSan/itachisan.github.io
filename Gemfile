@@ -1,26 +1,22 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-
-# gem "rails"
-
+# Dependencies for getting this site up and running
 gem "jekyll"
 gem "jekyll-paginate"
 gem "jekyll-minifier"
-gem 'wdm', '~> 0.1.1', platform: :mswin
-gem "webrick", "~> 1.7"
+gem "jemoji"
+
+# Performance-booster for watching directories on Windows
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# Fix time zone management issues
+# https://jekyllrb.com/docs/installation/windows/#time-zone-management
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+    gem "tzinfo", ">= 1", "< 3"
+    gem "tzinfo-data"
+end
 
 # Development dependencies
-gem "ruby-lsp", "~> 0.2.3", :group => :development
-gem "io-wait", :group => :development, platform: :ruby
-gem "openssl", "~> 3.0", :group => :development
-
-# eventmachine
-# sassc
-# ffi
-
-gem "ffi", "~> 1.15", :group => :development
-
-gem "jemoji", "~> 0.12.0"
+group :development do
+    gem "ruby-lsp"
+end
