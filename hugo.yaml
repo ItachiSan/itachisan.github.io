@@ -66,6 +66,8 @@ permalinks:
 
 # Enable default injection of pictures.
 markup:
+  highlight:
+    noClasses: false
   goldmark:
     renderHooks:
       image:
