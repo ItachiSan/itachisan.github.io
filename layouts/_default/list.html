@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="page">
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ .Content }}
+  <div class="related">
+    <ul class="related-pages">
+      {{ range .Pages }}
+      <li>
+        <h3>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+            <small>{{ .Date | dateFormat ":date_short" }}</small>
+          </a>
+        </h3>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{- partial "addtoany.html" . }}
+{{ end }}

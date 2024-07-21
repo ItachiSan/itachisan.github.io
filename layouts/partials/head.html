@@ -11,7 +11,7 @@
     {{ .Title }} &middot; {{ .Site.Title }}
     {{- end -}}
   </title>
-  <link rel="canonical" href="{{ .RelPermalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
   {{"<!-- CSS -->" | safeHTML }}
   <link rel="stylesheet" href="{{ (resources.Get `css/poole.css`).Permalink }}">
   <link rel="stylesheet" href="{{ (resources.Get `css/syntax.css`).Permalink }}">

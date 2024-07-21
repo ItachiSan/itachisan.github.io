@@ -2,13 +2,13 @@
 {{- /* Handle posts and pages differently */ -}}
 {{ if eq .Section "posts" }}
 <div class="post">
-  <h1 class="post-title">{{ .Page.Title }}</h1>
-  <span class="post-date">{{ .Page.Date | dateFormat ":date_full" }}</span>
+  <h1 class="post-title">{{ .Title }}</h1>
+  <span class="post-date">{{ .Date | dateFormat ":date_full" }}</span>
   {{ .Content }}
 </div>
 {{ else }}
 <div class="page">
-  <h1 class="page-title">{{ .Page.Title }}</h1>
+  <h1 class="page-title">{{ .Title }}</h1>
   {{ .Content }}
 </div>
 {{ end -}}

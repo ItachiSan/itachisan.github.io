@@ -4,7 +4,7 @@
 {{"<!-- Toggleable sidebar -->" | safeHTML}}
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>{{ .Site.Params.description }}</p>
+    <p>{{ .Site.Params.description | safeHTML }}</p>
   </div>
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item
