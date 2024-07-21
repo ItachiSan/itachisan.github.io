@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{- $posts := where site.RegularPages "Type" "posts" -}}
+{{- $paginator := .Paginate $posts }}
+<div class="posts">
+  {{ range $paginator.Pages -}}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+    </h1>
+    <span class="post-date">{{ .Page.Date | dateFormat ":date_long" }}</span>
+    {{ .Page.Content -}}
+  </div>
+  {{ end -}}
+</div>
+{{- with $paginator }}
+<div class="pagination">
+  {{- with .Next }}
+  <a class="pagination-item older" href="{{ .URL }}">Older</a>
+  {{ else }}
+  <span class="pagination-item older">Older</span>
+  {{ end -}}
+  {{- with .Prev }}
+  {{- if eq .PageNumber 2 }}
+  <a class="pagination-item newer" href="{{ .Site.BaseURL }}">Newer</a>
+  {{ else }}
+  <a class="pagination-item newer" href="{{ .URL }}">Newer</a>
+  {{ end -}}
+  {{ else }}
+  <span class="pagination-item newer">Newer</span>
+  {{ end }}
+</div>
+{{ end }}
+
+{{ end }}

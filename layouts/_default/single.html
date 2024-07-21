@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{- /* Handle posts and pages differently */ -}}
+{{ if eq .Section "posts" }}
+<div class="post">
+  <h1 class="post-title">{{ .Page.Title }}</h1>
+  <span class="post-date">{{ .Page.Date | dateFormat ":date_full" }}</span>
+  {{ .Content }}
+</div>
+{{ else }}
+<div class="page">
+  <h1 class="page-title">{{ .Page.Title }}</h1>
+  {{ .Content }}
+</div>
+{{ end -}}
+
+{{- partial "addtoany.html" . }}
+{{ if .Site.Config.Services.Disqus.Shortname }}
+<div class="comments">
+  {{ template "_internal/disqus.html" . }}
+</div>
+{{ end }}
+
+{{- if eq .Section "posts" }}
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {{ with .Site.RegularPages.Related . | first 3 }}
+    {{ range . }}
+    <li>
+      <h3>
+        <a href="{{ .RelPermalink }}">
+          {{ .Title }}
+          <small>{{ .Date | dateFormat ":date_short" }}</small>
+        </a>
+      </h3>
+    </li>
+    {{ end }}
+    {{ end -}}
+  </ul>
+</div>
+{{ end -}}
+{{ end -}}

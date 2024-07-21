@@ -1,0 +1,23 @@
+{{/* TODO: Remove for Hugo built-in template */}}
+{{ `<?xml version="1.0" encoding="utf-8"?>` | safeHTML }}
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>{{ .Site.Title }}</title>
+ <link href="{{ .Site.BaseURL }}atom.xml" rel="self"/>
+ <link href="{{ .Site.BaseURL }}"/>
+ <updated>{{ time.Now }}</updated>
+ <id>{{ .Site.BaseURL }}</id>
+ <author>
+   <name>{{ .Site.Params.author.name }}</name>
+   <email>{{ .Site.Params.author.email }}</email>
+ </author>
+ {{ $posts := where site.RegularPages "Type" "posts" }}
+ {{ range ( .Paginate $posts).Pages }}
+ <entry>
+   <title>{{ .Title }}</title>
+   <link href="{{ .RelPermalink }}"/>
+   <updated>{{ .Date }}</updated>
+   <id>{{ .Permalink }}</id>
+   <content type="html">{{ .Content }}</content>
+ </entry>
+ {{ end }}
+</feed>

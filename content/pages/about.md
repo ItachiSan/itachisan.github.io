@@ -1,6 +1,6 @@
 ---
-title: 'About'
-slug:  'about'
+title:  'About'
+slug:   'about'
 ---
 
 ### Credits
