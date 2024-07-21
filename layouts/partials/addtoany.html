@@ -1,4 +1,7 @@
 {{- with .Site.Params.addtoany -}}
+{{ if hugo.IsDevelopment }}
+<p>AddToAny is disabled when in development mode.</p>
+{{ else }}
 {{ "<!-- AddToAny BEGIN -->" | safeHTML }}
 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
     <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
@@ -12,4 +15,5 @@
 <script async src="{{ .RelPermalink }}"></script>
 {{ end -}}
 {{ "<!-- AddToAny END -->" | safeHTML }}
+{{ end }}
 {{- end -}}
