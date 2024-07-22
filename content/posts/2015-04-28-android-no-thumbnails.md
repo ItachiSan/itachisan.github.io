@@ -1,7 +1,8 @@
 ---
-date:  '2015-04-28T00:00:00Z'
-title: 'Android: Preventing Gallery thumbnails creation'
-slug:  'android-no-thumbnails'
+date:    '2015-04-28T00:00:00Z'
+title:   'Android: Preventing Gallery thumbnails creation'
+slug:    'android-no-thumbnails'
+aliases: '/2015/04/28/android-no-thumbnails'
 ---
 
 I'm really having an hard time in this period (***exams, duh***) but considering

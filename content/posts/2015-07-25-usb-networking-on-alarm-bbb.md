@@ -1,7 +1,8 @@
 ---
-date:  '2015-07-25T00:00:00Z'
-title: 'ArchLinuxARM on BeagleBone Black: getting network working over USB'
-slug:  'usb-networking-on-alarm-bbb'
+date:    '2015-07-25T00:00:00Z'
+title:   'ArchLinuxARM on BeagleBone Black: getting network working over USB'
+slug:    'usb-networking-on-alarm-bbb'
+aliases: '/2015/07/25/usb-networking-on-alarm-bbb'
 ---
 
 As written in title, this post will be about setting up a working USB connection

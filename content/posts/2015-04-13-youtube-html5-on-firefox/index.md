@@ -1,7 +1,8 @@
 ---
-date:  '2015-04-13T00:00:00Z'
-title: 'YouTube + HTML5 = PROFIT'
-slug:  'youtube-html5-on-firefox'
+date:    '2015-04-13T00:00:00Z'
+title:   'YouTube + HTML5 = PROFIT'
+slug:    'youtube-html5-on-firefox'
+aliases: '/2015/04/13/youtube-html5-on-firefox'
 ---
 
 *Everybody loves YouTube, doesn't it*? I love this service too.

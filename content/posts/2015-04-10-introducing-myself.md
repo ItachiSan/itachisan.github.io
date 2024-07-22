@@ -1,7 +1,8 @@
 ---
-date:  '2015-04-10T00:00:00Z'
-title: 'Introducing myself'
-slug:  'introducing-myself'
+date:    '2015-04-10T00:00:00Z'
+title:   'Introducing myself'
+slug:    'introducing-myself'
+aliases: '/2015/04/10/introducing-myself'
 ---
 
 Finally, here I am.

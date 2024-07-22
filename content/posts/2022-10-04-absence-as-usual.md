@@ -1,7 +1,8 @@
 ---
-date:  '2022-10-04T00:00:00Z'
-title: 'Absent as usual... Life is hard'
-slug:  'absence-as-usual'
+date:    '2022-10-04T00:00:00Z'
+title:   'Absent as usual... Life is hard'
+slug:    'absence-as-usual'
+aliases: '/2022/10/04/absence-as-usual'
 ---
 
 Well, hello again!

@@ -49,12 +49,6 @@ services:
   googleAnalytics:
     ID: G-GVMQM4NQY2
 
-# Ensure we have the same page structure of the Jekyll blog.
-permalinks:
-  page:
-    posts: /:year/:month/:day/:slug/
-    pages: /:slug/
-
 # Enable default injection of pictures.
 markup:
   _merge: shallow
