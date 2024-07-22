@@ -1,0 +1,3 @@
+[submodule "themes/lanyon"]
+	path = themes/lanyon
+	url = https://github.com/ItachiSan/hugo-theme-lanyon
