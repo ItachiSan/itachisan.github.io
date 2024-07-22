@@ -1,6 +1,7 @@
 ---
-layout: page
-title: About
+title:   'About'
+slug:    'about'
+aliases: '/about/'
 ---
 
 ### Credits

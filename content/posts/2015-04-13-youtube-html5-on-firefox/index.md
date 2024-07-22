@@ -1,6 +1,8 @@
 ---
-layout: post
-title: YouTube + HTML5 = PROFIT
+date:    '2015-04-13T00:00:00Z'
+title:   'YouTube + HTML5 = PROFIT'
+slug:    'youtube-html5-on-firefox'
+aliases: '/2015/04/13/youtube-html5-on-firefox'
 ---
 
 *Everybody loves YouTube, doesn't it*? I love this service too.
@@ -54,7 +56,7 @@ facepalms for me.).
 installation tutorial for *Ubuntu*.
 Instead, for installing **libvdpau-va-gl** on *ArchLinux* you could do something
 in a shell like this:
-{% highlight bash %}
+{{< highlight bash >}}
 # Installing required packages
 sudo pacman -S libvdpau-va-gl libva-intel-driver flashplugin
 # Enabling HardWare Accelleration for Flash plugin
@@ -63,15 +65,15 @@ sudo sed -i 's/#Enable/Enable/' /etc/adobe/mms.cfg
 echo "export VDPAU_DRIVER=va_gl" >> .bashrc
 # Activate it for the actual session
 export VDPAU_DRIVER=va_gl
-{% endhighlight %}
+{{< / highlight >}}
 **Notice**: in this way it'll work just for the user which exports the variable;
 to make it default for the whole system, you should create a
 ***/etc/profile.d/vdpau_vaapi.sh***
 script with this commands:
-{% highlight sh %}
+{{< highlight sh >}}
 #!/bin/sh
 export VDPAU_DRIVER=va_gl
-{% endhighlight %}
+{{< / highlight >}}
 This will do the trick.
 
 ## The solution is... HTML5!
@@ -86,11 +88,11 @@ related source code is avaible, but it *should* use *hardware accellerated*
 
 ## But... #2
 Actually, it fully works just on *Chromium/Google Chrome*...
-![Fully works on ArchLinux Chromium...]({{ "/public/2015-04-13/chromium.png" | relative_url }})
+![Fully works on ArchLinux Chromium...](images/chromium.png)
 While on *Firefox*...
-![Doh #1.]({{ "/public/2015-04-13/firefox-archlinux.png" | relative_url }})
+![Doh #1.](images/firefox-archlinux.png)
 And on *Windows Firefox*
-![Doh #2.]({{ "/public/2015-04-13/firefox-windows.png" | relative_url }})
+![Doh #2.](images/firefox-windows.png)
 
 ## The final solution (TL;DR)
 
@@ -99,7 +101,7 @@ have to open the internal configuration
 [here (Remember, just for  Firefox)](about:config), press the big "Yeah, I'll be
 a fine boy" button (*can't remember the proper English text, sorry*) set the
 flags shown below as suggested (**PRO TIP**: you can use the built-in search bar):
-{% highlight yaml %}
+{{< highlight yaml >}}
 media.mediasource.enabled: true
 media.mediasource.mp4.enabled: true
 media.mediasource.webm.enabled: true
@@ -110,13 +112,14 @@ media.fragmented-mp4.exposed: true
 media.fragmented-mp4.ffmpeg.enabled: true
 media.fragmented-mp4.gmp.enabled: true
 media.fragmented-mp4.use-blank-decoder: false
-{% endhighlight %}
+{{< / highlight >}}
 
 And finally...
 *Firefox on ArchLinux*
-![Yes #1.]({{ "/" | relative_url }}public/2015-04-13/firefox-archlinux-working.png)
+![Yes #1.](images/firefox-archlinux-working.png)
+
 And on *Firefox on Windows*.
-![Yes #2.]({{ "/" | relative_url }}public/2015-04-13/firefox-windows-working.png)
+![Yes #2.](images/firefox-windows-working.png)
 
 ## The end
 Well, that's all folks for now.

@@ -1,6 +1,8 @@
 ---
-layout: post
-title: Back to the blog, from the future!
+date:     '2021-09-28T00:00:00Z'
+title:    'Back to the blog, from the future!'
+slug:     'back-from-the-future'
+aliases:  '/2021/09/28/back-from-the-future'
 ---
 
 Here I am, back to this blog.
